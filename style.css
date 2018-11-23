@@ -34,7 +34,7 @@ blockquote {
 }
 
 /* Resume heading */
-.heading header { 
+.heading header {
 
 }
 
@@ -116,8 +116,9 @@ section h2 {
 	margin: 0.5em 0;
 	padding: 0 0 0.5em;
 	font-size: 90%;
+	display: flex;
+	align-items: center;
 }
-
 #skills .item .name {
 	font-weight: 600;
 	display: inline-block;
@@ -127,9 +128,24 @@ section h2 {
 	vertical-align: top;
 }
 
+#skills .item .level {
+	display: inline-block;
+	height: 16px;
+	width: 26px;
+	vertical-align: top;
+	text-align: center;
+	transform: rotate(90deg);
+	font-size: 2em;
+	letter-spacing: -3px;
+}
+#skills .item .level.Novice::after       {content: "•"}
+#skills .item .level.Intermediate::after {content: "••"}
+#skills .item .level.Expert::after       {content: "•••"}
+#skills .item .level.Novice::after       {opacity: 0.3;}
+#skills .item .level.Expert::after       {color: green;}
 #skills .item .keywords {
 	display: inline-block;
-	width: 70%;
+	width: calc( 70% - 16px );
 	vertical-align: top;
 }
 
@@ -140,5 +156,3 @@ section h2 {
 	width: 49.5%;
 	border-bottom: 0;
 }
-
-
