@@ -4,8 +4,7 @@ var Handlebars = require("handlebars");
 function render(resume) {
 	var css = fs.readFileSync(__dirname + "/style.css", "utf-8");
 	var template = fs.readFileSync(__dirname + "/resume.template", "utf-8");
-	// var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-	var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+	var months = resume.basics.l10n.months;
 
 	// Nicer dates
 	Handlebars.registerHelper('date', function(date) {
@@ -16,6 +15,7 @@ function render(resume) {
 
 	return Handlebars.compile(template)({
 		css: css,
+		l10n: resume.basics.l10n,
 		resume: resume
 	});
 }

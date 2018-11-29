@@ -42,12 +42,14 @@ blockquote {
 	font-size: 180%;
 	margin: 0.5em 0;
 	font-weight: 600;
+	page-break-after: avoid;
 }
 
 .heading header h2 {
 	font-size: 140%;
 	margin: 0;
 	font-weight: 400;
+	page-break-after: avoid;
 }
 
 .heading header .contact .detail {
@@ -71,6 +73,7 @@ section h2 {
 	text-transform: uppercase;
 	color: #BC1B39;
 	font-weight: 400;
+	page-break-after: avoid;
 }
 
 /* Experience items */
@@ -151,9 +154,10 @@ section h2 {
 }
 
 /* education */
-#education .item {
+#education .item, #interests .item, #languages .item {
 	display: inline-block;
 	vertical-align: top;
 	width: 49.5%;
 	border-bottom: 0;
 }
+#languages .item {width: 32%;}

@@ -75,7 +75,7 @@
 
 	{{#if resume.skills.length}}
 	<section id="skills">
-		<h2>Skills</h2>
+		<h2>{{l10n.Skills}}</h2>
 		{{#each resume.skills}}
 		<div class="item">
 			{{#if name}}
@@ -100,7 +100,7 @@
 
 	{{#if resume.work.length}}
 	<section class="experience">
-		<h2>Experience</h2>
+		<h2>{{l10n.Experience}}</h2>
 		{{#each resume.work}}
 		<section class="item">
 			<header>
@@ -148,7 +148,7 @@
 
 	{{#if resume.volunteer.length}}
 	<section class="experience">
-		<h2>Volunteering</h2>
+		<h2>{{l10n.Volunteering}}</h2>
 		{{#each resume.volunteer}}
 		<div class="item">
 			<header>
@@ -196,7 +196,7 @@
 
 	{{#if resume.education.length}}
 	<section id="education">
-		<h2>Education</h2>
+		<h2>{{l10n.Education}}</h2>
 		{{#each resume.education}}
 		<div class="item">
 			<header>
@@ -236,9 +236,9 @@
 				{{/if}}
 
 				{{#if gpa}}
-				<span class="gpa">
-					GPA: {{gpa}}
-				</span>
+				<div class="gpa">
+					{{@root.l10n.GPA}}: {{gpa}}
+				</div>
 				{{/if}}
 			</div>
 
@@ -314,7 +314,7 @@
 
 	{{#if resume.languages.length}}
 	<section id="languages">
-		<h2>Languages</h2>
+		<h2>{{l10n.Languages}}</h2>
 		{{#each resume.languages}}
 		<div class="item">
 			{{#if language}}
@@ -334,7 +334,7 @@
 
 	{{#if resume.interests.length}}
 	<section id="interests">
-		<h2>Interests</h2>
+		<h2>{{l10n.Interests}}</h2>
 		{{#each resume.interests}}
 		<div class="item">
 			{{#if name}}
